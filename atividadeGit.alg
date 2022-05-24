@@ -1,7 +1,6 @@
 algoritmo "atividadeGit"
-// Função : Operações matemáticas
+// Funcao : Operacoes matematicas
 // Data : 5/23/2022
-// Seção de Declarações
 var
 opcao : inteiro
 num1,num2: real
@@ -22,8 +21,6 @@ resposta<-numero1/numero2
 retorne resposta
 fimfuncao
 
-num1, num2 : real
-
 funcao f_soma (p_num1, p_num2 : real) :real
 var
 soma : real
@@ -35,38 +32,40 @@ fimfuncao
 
 inicio
 enquanto opcao<>9 faca
-   escreval("Escolha uma opção")
+   escreval("Escolha uma opcao")
    escreval("1 - Soma")
-   escreval("2 - Subtração")
-   escreval("3 - Multiplicação")
-   escreval("4 - Divisão")
+   escreval("2 - Subtracao")
+   escreval("3 - Multiplicacao")
+   escreval("4 - Divisao")
    escreval("9 - Sair do algoritmo")
    leia(opcao)
    escolha opcao
    caso 1
-   escreval("Digite o primeiro número da soma")
-   leia(num1)
-   escreval("Digite o segundo número da soma")
-   leia(num2)
-   escreval("O resultado da soma é:", f_soma(num1, num2))
+      limpatela
+      escreval("Digite o primeiro numero da soma")
+      leia(num1)
+      escreval("Digite o segundo numero da soma")
+      leia(num2)
+      limpatela
+      escreval("Resultado da soma: ", f_soma(num1, num2))
    caso 2
       limpatela
-      escreval("Operação selecionada: subtração")
-      escreval("Informe o número 1")
+      escreval("Operacao selecionada: subtracao")
+      escreval("Informe o numero 1")
       leia(num1)
-      escreval("Informe o número 2")
+      escreval("Informe o numero 2")
       leia(num2)
       limpatela
       escreval(num1," - ", num2, " = ",f_subtracao(num1,num2))
    caso 3
-   
+
    caso 4
       limpatela
-      escreval("Operação selecionada: divisão")
-      escreval("Informe o número 1 (númerador)")
+      escreval("Operacao selecionada: divisao")
+      escreval("Informe o numero 1 (numerador)")
       leia(num1)
       repita
-         escreval("Informe o número 2 (divisor)")
+         escreval("Informe o numero 2 (divisor)")
          leia(num2)
          se num2 = 0 entao
             escreval("O divisor tem que ser diferente de 0")
@@ -77,7 +76,7 @@ enquanto opcao<>9 faca
    caso 9
       escreval("Algoritmo finalizado com sucesso")
    outrocaso
-      escreval("Opção inválida")
+      escreval("Opcao invalida")
    fimescolha
 fimenquanto
 fimalgoritmo
