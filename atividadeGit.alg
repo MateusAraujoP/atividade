@@ -1,7 +1,7 @@
 algoritmo "atividadeGit"
-// Função : Operações matemáticas
+// FunÃ§Ã£o : OperaÃ§Ãµes matemÃ¡ticas
 // Data : 5/23/2022
-// Seção de Declarações
+// SeÃ§Ã£o de DeclaraÃ§Ãµes
 var
 opcao : inteiro
 num1,num2: real
@@ -22,40 +22,51 @@ resposta<-numero1/numero2
 retorne resposta
 fimfuncao
 
+num1, num2 : real
+
+funcao f_soma (p_num1, p_num2 : real) :real
+var
+soma : real
+inicio
+soma<- p_num1 + p_num2
+
+retorne soma
+fimfuncao
+
 inicio
 enquanto opcao<>9 faca
-   escreval("Escolha uma opção")
+   escreval("Escolha uma opÃ§Ã£o")
    escreval("1 - Soma")
-   escreval("2 - Subtração")
-   escreval("3 - Multiplicação")
-   escreval("4 - Divisão")
+   escreval("2 - SubtraÃ§Ã£o")
+   escreval("3 - MultiplicaÃ§Ã£o")
+   escreval("4 - DivisÃ£o")
    escreval("9 - Sair do algoritmo")
    leia(opcao)
    escolha opcao
    caso 1
-
-
-
+   escreval("Digite o primeiro nÃºmero da soma")
+   leia(num1)
+   escreval("Digite o segundo nÃºmero da soma")
+   leia(num2)
+   escreval("O resultado da soma Ã©:", f_soma(num1, num2))
    caso 2
       limpatela
-      escreval("Operação selecionada: subtração")
-      escreval("Informe o número 1")
+      escreval("OperaÃ§Ã£o selecionada: subtraÃ§Ã£o")
+      escreval("Informe o nÃºmero 1")
       leia(num1)
-      escreval("Informe o número 2")
+      escreval("Informe o nÃºmero 2")
       leia(num2)
       limpatela
       escreval(num1," - ", num2, " = ",f_subtracao(num1,num2))
    caso 3
-
-
-
+   
    caso 4
       limpatela
-      escreval("Operação selecionada: divisão")
-      escreval("Informe o número 1 (númerador)")
+      escreval("OperaÃ§Ã£o selecionada: divisÃ£o")
+      escreval("Informe o nÃºmero 1 (nÃºmerador)")
       leia(num1)
       repita
-         escreval("Informe o número 2 (divisor)")
+         escreval("Informe o nÃºmero 2 (divisor)")
          leia(num2)
          se num2 = 0 entao
             escreval("O divisor tem que ser diferente de 0")
@@ -63,13 +74,10 @@ enquanto opcao<>9 faca
       ate num2 <> 0
       limpatela
       escreval(num1," / ", num2, " = ",f_divisao(num1,num2))
-      caso 9
+   caso 9
       escreval("Algoritmo finalizado com sucesso")
    outrocaso
-      escreval("Opção inválida")
+      escreval("OpÃ§Ã£o invÃ¡lida")
    fimescolha
-
 fimenquanto
-
-
 fimalgoritmo
