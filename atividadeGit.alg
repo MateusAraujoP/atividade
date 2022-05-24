@@ -4,6 +4,17 @@ algoritmo "atividadeGit"
 // Seção de Declarações
 var
 opcao : inteiro
+num1, num2 : real
+
+funcao f_soma (p_num1, p_num2 : real) :real
+var
+soma : real
+inicio
+soma<- p_num1 + p_num2
+
+retorne soma
+fimfuncao
+
 
 inicio
 // Seção de Comandos
@@ -14,9 +25,13 @@ enquanto opcao<>9 faca
    escreval("4 - Divisão")
    escreval("9 - Sair do algoritmo")
    leia(opcao)
-   escolha
+   escolha opcao
    caso 1
-
+   escreval("Digite o primeiro número da soma")
+   leia(num1)
+   escreval("Digite o segundo número da soma")
+   leia(num2)
+   escreval("O resultado da soma é:", f_soma(num1, num2))
 
 
    caso 2
@@ -30,7 +45,7 @@ enquanto opcao<>9 faca
    caso 4
 
 
-
+   caso 9
    outrocaso
       escreval("Opção inválida")
    fimescolha
