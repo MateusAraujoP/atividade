@@ -5,6 +5,14 @@ var
 opcao : inteiro
 num1,num2: real
 
+funcao f_multiplicacao(numero1, numero2 : real) : real
+var
+resultado : real
+inicio
+resultado <- numero1 * numero2
+retorne resultado
+fimfuncao
+
 funcao f_subtracao(numero1,numero2:real):real
 var
 resposta:real
@@ -58,7 +66,12 @@ enquanto opcao<>9 faca
       limpatela
       escreval(num1," - ", num2, " = ",f_subtracao(num1,num2))
    caso 3
-
+   escreval("Escreva o primeiro numero: ")
+   leia(num1)
+   escreval("Escreva o segundo numero: ")
+   leia(num2)
+   limpatela
+   escreval(num1, " * ", num2, " = ",  f_multiplicacao(num1, num2))
    caso 4
       limpatela
       escreval("Operacao selecionada: divisao")
