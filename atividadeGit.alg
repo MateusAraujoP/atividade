@@ -41,13 +41,13 @@ enquanto opcao<>9 faca
    leia(opcao)
    escolha opcao
    caso 1
-   limpatela
-   escreval("Digite o primeiro numero da soma")
-   leia(num1)
-   escreval("Digite o segundo numero da soma")
-   leia(num2)
-   limpatela
-   escreval("resultado da soma: ", f_soma(num1, num2))
+      limpatela
+      escreval("Digite o primeiro numero da soma")
+      leia(num1)
+      escreval("Digite o segundo numero da soma")
+      leia(num2)
+      limpatela
+      escreval("Resultado da soma: ", f_soma(num1, num2))
    caso 2
       limpatela
       escreval("Operacao selecionada: subtracao")
@@ -58,10 +58,10 @@ enquanto opcao<>9 faca
       limpatela
       escreval(num1," - ", num2, " = ",f_subtracao(num1,num2))
    caso 3
-   
+
    caso 4
       limpatela
-      escreval("Operação selecionada: divisao")
+      escreval("Operacao selecionada: divisao")
       escreval("Informe o numero 1 (numerador)")
       leia(num1)
       repita
