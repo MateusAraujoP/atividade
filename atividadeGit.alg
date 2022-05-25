@@ -29,17 +29,42 @@ resposta<-numero1/numero2
 retorne resposta
 fimfuncao
 
-funcao f_soma (p_num1, p_num2 : real) :real
+funcao f_multiplicacao (p_num1, p_num2 : real) : real
 var
-soma : real
+resultado : real
 inicio
-soma<- p_num1 + p_num2
+resultado <- p_num1 * p_num2
+retorne resultado
+fimfuncao
 
-retorne soma
+funcao f_subtracao(p_num1, p_num2 : real) : real
+var
+resposta : real
+inicio
+resposta <- p_num1 - p_num2
+retorne resposta
+fimfuncao
+
+funcao f_divisao (p_num1, p_num2 : real) : real
+var
+resposta : real
+inicio
+resposta <- p_num1 / p_num2
+retorne resposta
+fimfuncao
+
+funcao f_soma (p_num1, p_num2 : real) : real
+var
+resposta : real
+inicio
+resposta <- p_num1 + p_num2
+
+retorne resposta
 fimfuncao
 
 inicio
-enquanto opcao<>9 faca
+enquanto opcao <> 9 faca
+
    escreval("Escolha uma opcao")
    escreval("1 - Soma")
    escreval("2 - Subtracao")
@@ -55,7 +80,8 @@ enquanto opcao<>9 faca
       escreval("Digite o segundo numero da soma")
       leia(num2)
       limpatela
-      escreval("Resultado da soma: ", f_soma(num1, num2))
+      escreval(num1, " + ", num2, " = ", f_soma(num1, num2))
+
    caso 2
       limpatela
       escreval("Operacao selecionada: subtracao")
@@ -66,12 +92,13 @@ enquanto opcao<>9 faca
       limpatela
       escreval(num1," - ", num2, " = ",f_subtracao(num1,num2))
    caso 3
-   escreval("Escreva o primeiro numero: ")
-   leia(num1)
-   escreval("Escreva o segundo numero: ")
-   leia(num2)
-   limpatela
-   escreval(num1, " * ", num2, " = ",  f_multiplicacao(num1, num2))
+      limpatela
+      escreval("Escreva o primeiro numero: ")
+      leia(num1)
+      escreval("Escreva o segundo numero: ")
+      leia(num2)
+      limpatela
+      escreval(num1, " * ", num2, " = ",  f_multiplicacao(num1, num2))
    caso 4
       limpatela
       escreval("Operacao selecionada: divisao")
