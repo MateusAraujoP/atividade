@@ -1,8 +1,33 @@
 algoritmo "atividadeGit"
 // Funcao : Operacoes matematicas
+// Data : 5/23/2022
 var
 opcao : inteiro
-num1, num2 : real
+num1,num2: real
+
+funcao f_multiplicacao(numero1, numero2 : real) : real
+var
+resultado : real
+inicio
+resultado <- numero1 * numero2
+retorne resultado
+fimfuncao
+
+funcao f_subtracao(numero1,numero2:real):real
+var
+resposta:real
+inicio
+resposta<-numero1-numero2
+retorne resposta
+fimfuncao
+
+funcao f_divisao(numero1,numero2:real):real
+var
+resposta:real
+inicio
+resposta<-numero1/numero2
+retorne resposta
+fimfuncao
 
 funcao f_multiplicacao (p_num1, p_num2 : real) : real
 var
@@ -39,6 +64,7 @@ fimfuncao
 
 inicio
 enquanto opcao <> 9 faca
+
    escreval("Escolha uma opcao")
    escreval("1 - Soma")
    escreval("2 - Subtracao")
@@ -55,6 +81,7 @@ enquanto opcao <> 9 faca
       leia(num2)
       limpatela
       escreval(num1, " + ", num2, " = ", f_soma(num1, num2))
+
    caso 2
       limpatela
       escreval("Operacao selecionada: subtracao")
