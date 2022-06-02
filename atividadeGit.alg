@@ -3,31 +3,7 @@ algoritmo "atividadeGit"
 // Data : 5/23/2022
 var
 opcao : inteiro
-num1,num2: real
-
-funcao f_multiplicacao(numero1, numero2 : real) : real
-var
-resultado : real
-inicio
-resultado <- numero1 * numero2
-retorne resultado
-fimfuncao
-
-funcao f_subtracao(numero1,numero2:real):real
-var
-resposta:real
-inicio
-resposta<-numero1-numero2
-retorne resposta
-fimfuncao
-
-funcao f_divisao(numero1,numero2:real):real
-var
-resposta:real
-inicio
-resposta<-numero1/numero2
-retorne resposta
-fimfuncao
+num1, num2 : real
 
 funcao f_multiplicacao (p_num1, p_num2 : real) : real
 var
@@ -37,29 +13,29 @@ resultado <- p_num1 * p_num2
 retorne resultado
 fimfuncao
 
-funcao f_subtracao(p_num1, p_num2 : real) : real
+funcao f_subtracao (p_num1, p_num2 : real) : real
 var
-resposta : real
+resultado : real
 inicio
-resposta <- p_num1 - p_num2
-retorne resposta
+resultado <- p_num1 - p_num2
+retorne resultado
 fimfuncao
 
 funcao f_divisao (p_num1, p_num2 : real) : real
 var
-resposta : real
+resultado : real
 inicio
-resposta <- p_num1 / p_num2
-retorne resposta
+resultado <- p_num1 / p_num2
+retorne resultado
 fimfuncao
 
 funcao f_soma (p_num1, p_num2 : real) : real
 var
-resposta : real
+resultado : real
 inicio
-resposta <- p_num1 + p_num2
+resultado <- p_num1 + p_num2
 
-retorne resposta
+retorne resultado
 fimfuncao
 
 inicio
@@ -75,30 +51,29 @@ enquanto opcao <> 9 faca
    escolha opcao
    caso 1
       limpatela
-      escreval("Digite o primeiro numero da soma")
+      escreval("Informe o numero 1:")
       leia(num1)
-      escreval("Digite o segundo numero da soma")
+      escreval("Informe o numero 2:")
       leia(num2)
       limpatela
-      escreval(num1, " + ", num2, " = ", f_soma(num1, num2))
+      escreval(num1, " +", num2, " =", f_soma(num1, num2))
 
    caso 2
       limpatela
-      escreval("Operacao selecionada: subtracao")
-      escreval("Informe o numero 1")
+      escreval("Informe o numero 1:")
       leia(num1)
-      escreval("Informe o numero 2")
+      escreval("Informe o numero 2:")
       leia(num2)
       limpatela
-      escreval(num1," - ", num2, " = ",f_subtracao(num1,num2))
+      escreval(num1," -", num2, " =", f_subtracao(num1, num2))
    caso 3
       limpatela
-      escreval("Escreva o primeiro numero: ")
+      escreval("Informe o numero 1:")
       leia(num1)
-      escreval("Escreva o segundo numero: ")
+      escreval("Informe o numero 2:")
       leia(num2)
       limpatela
-      escreval(num1, " * ", num2, " = ",  f_multiplicacao(num1, num2))
+      escreval(num1, " *", num2, " =", f_multiplicacao(num1, num2))
    caso 4
       limpatela
       escreval("Operacao selecionada: divisao")
@@ -112,7 +87,7 @@ enquanto opcao <> 9 faca
          fimse
       ate num2 <> 0
       limpatela
-      escreval(num1," / ", num2, " = ",f_divisao(num1,num2))
+      escreval(num1," /", num2, " =", f_divisao(num1, num2))
    caso 9
       escreval("Algoritmo finalizado com sucesso")
    outrocaso
